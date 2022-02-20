@@ -33,3 +33,5 @@
 docs/~$sign Doc.docx
 *.vpp.bak_*
 *.vpp.lck
+
+*.idea/
