@@ -7,7 +7,7 @@
  * Version: 1.0
  * Brief: 
  * -----
- * Last Modified: Sunday, 20th February 2022 13:47:33
+ * Last Modified: Monday, 21st February 2022 8:29:18
  * Modified By: nknab
  * -----
  * Copyright ©2022 nknab. All rights reserved.
@@ -20,9 +20,17 @@ namespace sff_sensor {
     class Sensor{
 
     protected:
+        /**
+         * @brief Construct a new Sensor object
+         * 
+         */
         virtual Sensor(){};
 
     public:
+        /**
+         * @brief Destroy the Sensor object
+         * 
+         */
         virtual ~Sensor(){};
     };
 }

@@ -7,7 +7,7 @@
  * Version: 1.0
  * Brief: 
  * -----
- * Last Modified: Sunday, 20th February 2022 13:48:48
+ * Last Modified: Monday, 21st February 2022 8:29:54 AM
  * Modified By: nknab
  * -----
  * Copyright ©2022 nknab. All rights reserved.
@@ -20,9 +20,17 @@ namespace sff_filter{
     class Filter{
 
     protected:
+        /**
+        * @brief Construct a new Filter object
+        * 
+        */
         virtual Filter(){};
 
     public:
+        /**
+        * @brief Destroy the Filter object
+        * 
+        */
         virtual ~Filter(){};
     };
 }

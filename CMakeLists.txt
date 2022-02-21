@@ -17,7 +17,28 @@ find_package(rclcpp REQUIRED)
 include_directories(include/sf_framework)
 set(HEADER_FILES include/sf_framework/filter.h include/sf_framework/fusion.h include/sf_framework/sensor.h)
 
-#add_library(sf_lib src/... ${HEADER_FILES})
+# add_library(sf_lib src/... ${HEADER_FILES})
+
+add_executable(main src/main.cpp)
+
+install(TARGETS 
+  main
+  DESTINATION lib/${PROJECT_NAME}/
+)
+
+install(
+  DIRECTORY include/sf_framework
+  DESTINATION include
+)
+
+# install(
+#   TARGETS sf_lib
+#   EXPORT sf_lib
+#   LIBRARY DESTINATION lib
+#   ARCHIVE DESTINATION lib
+#   RUNTIME DESTINATION bin
+#   INCLUDES DESTINATION include
+# )
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -30,13 +51,6 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(
-  TARGETS sf_lib
-  EXPORT sf_lib
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  RUNTIME DESTINATION bin
-  INCLUDES DESTINATION include
-)
+
 
 ament_package()
